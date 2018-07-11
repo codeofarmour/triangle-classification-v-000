@@ -22,9 +22,10 @@ class Triangle
       [s1, s2, s3].each {|s| valid_triangle << false if s <= 0}
       raise TriangleError if valid_triangle.include?(false)
     end
+  end
     
 class TriangleError < StandardError
      
-  end
+end
     
 end
