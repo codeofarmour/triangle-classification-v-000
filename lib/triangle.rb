@@ -17,8 +17,14 @@ class Triangle
       :scalene
     end
     
+    def triangle_is_valid?
+      valid_triangle = [(s1 + s2 > s3), (s1 + s3 > b), (s2 + s3 > s1)]
+      [s1, s2, s3].each {|s| valid_triangle << false if s <= 0}
+      raise TriangleError if valid_triangle.include?(false)
+    end
     
-      
+    class TriangleError < StandardError
+    end 
   end
     
 end
