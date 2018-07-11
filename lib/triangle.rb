@@ -23,8 +23,8 @@ class Triangle
       raise TriangleError if valid_triangle.include?(false)
     end
     
-    class TriangleError < StandardError
-    end 
+class TriangleError < StandardError
+     
   end
     
 end
