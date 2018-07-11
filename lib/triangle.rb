@@ -8,6 +8,15 @@ class Triangle
   end
   
   def kind
+    triangle_is_valid?
+    if s1 == s2 && s2 == s3
+      :equilateral
+    elsif s1 == s2 || s2 == s3 || s1 == s3
+      :isosceles
+    else
+      :scalene
+    end
+      
   end
     
 end
